@@ -1,0 +1,19 @@
+---
+- name: copy
+  hosts: client_1
+  become: true
+  become_user: root
+  gather_facts: true
+  tasks:
+    - name: copy file
+      copy: src=login.php dest=/var/www/html/login.php
+    - name: copy file
+      copy: src=reset-password.php dest=/var/www/html/reset-passowrd.php
+    - name: copy file
+      copy: src=logout.php dest=/var/www/html/logout.php
+    - name: copy file
+      copy: src=register.php dest=/var/www/html/register.php
+    - name: copy file
+      copy: src=config.php dest=/var/www/html/config.php
+    - name: copy file
+      copy: src=welcome.php dest=/var/www/html/welcome.php
